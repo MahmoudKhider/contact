@@ -1,38 +1,212 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+}
+section{
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  height: 750px;
+  background: #095a55;
+}
+section::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background:#fff38e;
+}
+.container{
+position: relative;
+left: 200px;
+right: 20px;
+min-width: 1150px;
+min-height: 600px;
+display: flex;
+z-index: 1000;
+
+
+}
+.container .info{
+  position: absolute;
+  top: 40px;
+  width: 350px;
+ 
+  height: calc(100% - 80px);
+  background: #095a55;
+  z-index: 1;
+  display: flex;
+  padding: 40px;
+ 
+  box-shadow: 0 8px 6px 0;
+}
+
+.container .info h2{
+ color:#fff;
+ font-size: 30px;
+ font-weight: 500;
+ margin: 10px;
+}
+.container .info ul.in{
+  position: relative;
+  margin: 20px 0;
+}
+.container .info ul.in li{
+  position: relative;
+  list-style: none;
+  display: flex;
+  margin: 19px 20px;
+  align-items: flex-start;
+}
+
+footer{
+ 
+  display: flex;
+ 
+  position: absolute;
+  top: 410px;
+  color: #fff;
+}
+footer ul{
+  list-style: none;
+  margin-left: 50px;
+  display: flex;
+}
+footer ul li{
+  padding: 15px;
+}
+
+.container .from{
+
+  position: absolute;
+ 
+  padding: 70px 50px;
+  padding-left: 250px;
+  margin-left: 150px;
+  width:calc(100% - 100px);
+  box-shadow: 0 5px 5px 0;
+  height: 100%;
+  background: #fff;
+ 
+}
+.container .from .Box {
+width: 50%;
+ height: 400px;
+  position:relative;
+  align-self: center;
+  top: 10px;
+  border-radius: 1.5rem;
+ 
+  display:flex;
+  flex-direction: row;
+  
+}
+
+
+
+.rightside {
+ 
+width: 35rem;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 1rem 2rem 3rem 3rem;
+}
+
+p{
+  display:block;
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin: .8rem 0;
+}
+
+.inputbox
+{
+  color:#030303;
+width: 100%;
+  padding: 0.5rem;
+  border: none;
+  border-bottom: 1.5px solid #ccc;
+  margin-bottom: 1rem;
+  border-radius: 0.3rem;
+  font-family: 'Roboto', sans-serif;
+  color: #615a5a;
+  font-size: 1.1rem;
+  font-weight: 500;
+outline:none;
+}
+
+.exp {
+  display:flex;
+  justify-content: space-between;
+  padding-top: 0.6rem;
+}
+
+.exp_text{
+  padding-right: 1rem;
+}
+.exp_text2{
+  padding:0 1rem;
+}
+
+.button{
+  background: #095a55;
+  padding: 15px;
+  border: none;
+  border-radius: 50px;
   color: white;
+  font-weight: 200;
+  font-size: 1rem;
+  margin-top: 10px;
+  width:50%;
+ 
 }
 
-.App-link {
-  color: #61dafb;
+.button:hover
+{
+transform: scale(1.05) translateY(-3px);
+  box-shadow: 3px 3px 6px #38373785;
+}
+@media(max-width:500px){
+  .container{
+      position: relative;
+      left: 30px;
+      right: 20px;
+      min-width: 1150px;
+      min-height: 600px;
+      display: flex;
+      z-index: 1000;
+     
+      
+     }
+
+     .container .info{
+      position: absolute;
+      top: 40px;
+      width: 255px;
+     
+      height: calc(100% - 80px);
+      background: #095a55;
+      z-index: 1;
+      display: flex;
+      padding: 40px;
+     
+      box-shadow: 0 8px 6px 0;
+  }
+  .rightside {
+ 
+      width: 00px;
+      position: absolute;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 1rem 2rem 3rem 3rem;
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
